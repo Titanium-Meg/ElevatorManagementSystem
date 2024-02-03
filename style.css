@@ -1,0 +1,144 @@
+/* BUILDING */
+
+body {
+  width: 100%;
+  font-family: monospace;
+  background: #ffffff;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center; 
+  padding-top: 25px;
+}
+
+
+.building {
+  bottom: 0;
+  width: 600px;
+  height: 600px;
+  border: 3px solid black;
+  position: absolute;
+}
+
+.floor {
+  width: 100%;
+  height: 100px;
+  border-bottom: 3px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+}
+
+/* ELEVATOR SYSTEM */
+
+.shaft {
+  width: 100px;
+  height: 100%;
+  background: silver;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+}
+
+.pulley {
+  width: 2px;
+  height: 600px;
+  background: url("rope.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+}
+
+.elevator {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: 100;
+  background: url("peopleelevator.png");
+  background-size: cover;
+  transition: 1s transform ease-in-out;
+  bottom: 0;
+
+}
+
+.elevator .door {
+  width: 50%;
+  height: 100%;
+  background-image: url("door.PNG");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  transition: 0.5s transform ease-in-out;
+}
+
+.elevator .door-left {
+  left: 0;
+  width: 50%;
+  transform-origin: left center;
+}
+
+.elevator .door-right {
+  right: 0;
+  width: 50%;
+  transform-origin: right center;
+}
+
+/* CONTROL PANEL */
+
+.control {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+input, button {
+  left: 250px;
+  padding: 3px 6px;
+  margin: 3px;
+}
+
+.openBtn {
+  background: url("open.PNG");
+  padding: 15px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.closeBtn {
+  padding:15px;
+  background: url("close.PNG");
+  background-size: cover;
+  background-position: center;
+}
+
+.emergencyBtn {
+  padding: 3px 6px;
+  margin: 3px;
+}
